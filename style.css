@@ -1,0 +1,133 @@
+/* Reseta margens e padding para consistência */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+.page-container {
+    max-width: 1226px;
+    margin: 178px auto 0 auto;
+    padding: 0 122px;
+    display: grid;
+    grid-template-columns: 1fr 408px; /* Duas colunas: conteúdo principal e sidebar */
+    gap: 30px;
+}
+
+.main-header {
+    grid-column: span 2; /* O cabeçalho ocupa as duas colunas */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding-bottom: 30px; /* Adiciona algum espaço abaixo do cabeçalho */
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: -3%;
+    color: black;
+    margin: 0;
+}
+
+.cta-button {
+    width: 195px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Espaço entre os posts grandes */
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.post-image {
+    width: 378px;
+    height: 270px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.post-date, .post-date-small {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -2%;
+    color: #64607D;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.post-title {
+    width: 378px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: -3%;
+    color: black;
+    margin: 0;
+}
+
+.post-excerpt {
+    width: 378px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -2%;
+    color: #64607D;
+    margin: 0;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os itens da sidebar */
+    margin-top: 80px; /* Alinha o início da sidebar com os posts grandes */
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.post-thumb {
+    width: 110px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.post-date-small, .post-text-small {
+    margin: 0;
+}
+
+.post-date-small {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.post-text-small {
+    width: 260px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -3%;
+    margin-top: 5px;
+}
