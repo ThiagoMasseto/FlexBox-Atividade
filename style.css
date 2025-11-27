@@ -1,133 +1,200 @@
-
+/* Configurações Básicas e Reset */
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    font-family: "Manrope", sans-serif;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
-.page-container {
-    max-width: 1226px;
-    margin: 178px auto 0 auto;
-    padding: 0 122px;
-    display: grid;
-    grid-template-columns: 1fr 408px; /* Duas colunas: conteúdo principal e sidebar */
-    gap: 30px;
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.main-header {
-    grid-column: span 2; /* O cabeçalho ocupa as duas colunas */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding-bottom: 30px; /* Adiciona algum espaço abaixo do cabeçalho */
+/* --- Cabeçalho da Seção --- */
+.section-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 30px;
 }
 
-.section-title {
-    font-weight: 800;
-    font-size: 42px;
-    line-height: 50px;
-    letter-spacing: -3%;
-    color: black;
+.section-header h1 {
+    font-size: 2em;
+    font-weight: 700;
     margin: 0;
+    color: #333;
 }
 
-.cta-button {
-    width: 195px;
-    height: 60px;
-    border-radius: 10px;
-    background-color: black;
+.btn-all-posts {
+    background-color: #333;
     color: white;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: inherit;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 80px; /* Espaço entre os posts grandes */
-}
-
-.post-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.post-image {
-    width: 378px;
-    height: 270px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.post-date, .post-date-small {
+    padding: 10px 20px;
+    font-size: 0.9em;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: -2%;
-    color: #64607D;
-    margin-top: 10px;
-    margin-bottom: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-all-posts:hover {
+    background-color: #555;
+}
+
+/* --- Layout Principal das Postagens (Flexbox) --- */
+.posts-content {
+    display: flex;
+    gap: 30px; 
+}
+
+/* Coluna de Posts Maiores (Destacados) */
+.featured-posts-column {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    flex: 2; /* 66% da largura */
+    gap: 30px; 
+}
+
+/* Coluna de Posts Menores (Lateral) */
+.side-posts-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 33% da largura */
+    gap: 20px;
+}
+
+/* --- Estilo dos Cartões de Postagem --- */
+
+/* Cartões Grandes */
+.post-card.large {
+    flex: 1 1 calc(50% - 15px);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.post-image-large {
+    height: 200px;
+}
+
+.post-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.post-info {
+    padding: 20px;
+}
+
+.post-date {
+    display: block;
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 5px;
 }
 
 .post-title {
-    width: 378px;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 36px;
-    letter-spacing: -3%;
-    color: black;
-    margin: 0;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
 }
 
 .post-excerpt {
-    width: 378px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: -2%;
-    color: #64607D;
-    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
 }
 
-.sidebar-content {
+/* Cartões Pequenos (Laterais) */
+.post-card.small {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 15px;
+    padding-top: 5px;
+    margin-top: 0;
+}
+
+.post-card.small:last-child {
+    border-bottom: none; 
+    padding-bottom: 0;
+}
+
+.post-image-small {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0; 
+    margin-right: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.post-image-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-info-small {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaço entre os itens da sidebar */
-    margin-top: 80px; /* Alinha o início da sidebar com os posts grandes */
+    justify-content: center;
 }
 
-.sidebar-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.post-thumb {
-    width: 110px;
-    height: 80px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-right: 15px; /* Espaço entre a imagem e o texto */
-}
-
-.post-date-small, .post-text-small {
+.post-title-small {
+    font-size: 0.95em;
+    font-weight: 400;
     margin: 0;
+    line-height: 1.3;
 }
 
-.post-date-small {
-    font-size: 14px;
-    line-height: 1.5;
+.post-card.small:hover .post-title-small {
+    color: #007bff;
 }
 
-.post-text-small {
-    width: 260px;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -3%;
-    margin-top: 5px;
+/* --- Media Queries (Responsividade) --- */
+@media (max-width: 900px) {
+    .posts-content {
+        flex-direction: column; 
+    }
+
+    .featured-posts-column {
+        flex-direction: row; 
+        flex: auto;
+    }
+
+    .side-posts-column {
+        flex: auto;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-posts-column {
+        flex-direction: column;
+    }
+
+    .post-card.large {
+        flex: 1 1 100%; 
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-header h1 {
+        margin-bottom: 15px;
+    }
 }

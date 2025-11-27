@@ -1,74 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Postagens</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="fonts.googleapis.com" rel="stylesheet">
-    
+    <title>Últimas Postagens</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div class="page-container">
+    <div class="container">
+        <header class="section-header">
+            <h1>Últimas Postagens</h1>
+            <button class="btn-all-posts">Todas as Postagens</button>
+        </header>
 
-    <header class="main-header">
-        <h1 class="section-title">Últimas Postagens</h1>
-        <button class="cta-button">
-            Todas as Postagens
-        </button>
-    </header>
+        <main class="posts-content">
 
-    <main class="main-content">
-        
-        <article class="post-card post-large">
-            <img class="post-image" src="Assets/foto1.jpg" alt="foto1 conteúdo passado no figma">
-            <p class="post-date">08-11-2021</p>
-            <h2 class="post-title">Acreditar que foi negligenciado, então permite a partida da existência.</h2>
-            <p class="post-excerpt">Bênção deu as boas-vindas à senhoria que ela conheceu e humorou o senhor criando-a. É necessária uma cama de segurança para seis dias de curiosidade.</p>
-        </article>
+            <div class="featured-posts-column">
 
-        <article class="post-card post-large">
-            <img class="post-image" src="Assets/foto2.jpg" alt="foto2 conteudo passado no figma">
-            <p class="post-date">08-11-2021</p>
-            <h2 class="post-title">No design, o temperamento ativo fica inquieto. Trinta para remover muita consideração por você.</h2>
-            <p class="post-excerpt">No entanto, a conexão de preferência é desagradável, mas melancólica, mas com aparência final. E parcialidade de excelência estimando dia encerrado tudo.</p>
-        </article>
-        
-    </main>
+                <article class="post-card large">
+                    <div class="post-image-large">
+                        <img src="Assets/foto1.jpg" alt="Pessoas trabalhando em uma mesa">
+                    </div>
+                    <div class="post-info">
+                        <span class="post-date">08-11-2021</span>
+                        <h2 class="post-title">Acreditar que foi negligenciado, então permite a partida da existência.</h2>
+                        <p class="post-excerpt">Bênção deu as boas-vindas à senhora que ela conheceu e humorou o senhor criando-a. É necessária uma cama de segurança para seis dias de curiosidade.</p>
+                    </div>
+                </article>
 
-    <aside class="sidebar-content">
+                <article class="post-card large">
+                    <div class="post-image-large">
+                        <img src="Assets/foto2.jpg" alt="Pessoas caminhando em uma floresta">
+                    </div>
+                    <div class="post-info">
+                        <span class="post-date">08-11-2021</span>
+                        <h2 class="post-title">No design, o temperamento ativo fica inquieto. Trinta para remover muita consideração por você.</h2>
+                        <p class="post-excerpt">No entanto, a conexão de preferência é desagradável, mas melancólica, mas com aparência final. É parcialidade de excelência estimando dia encerrado tudo.</p>
+                    </div>
+                </article>
 
-        <div class="sidebar-item">
-            <img class="post-thumb" src="Assets/foto3.jpg" alt="foto disponibilizada no figma">
-            <p class="post-date-small">08-11-2021</p>
-            <p class="post-text-small">Parcialidade ou continuidade em princípios específicos</p>
-        </div>
+            </div>
 
-        <div class="sidebar-item">
-            <img class="post-thumb" src="Assets/foto4.jpg" alt="foto disponibilizada no figma">
-            <p class="post-date-small">08-11-2021</p>
-            <p class="post-text-small">Acreditando, oh, dispondo-nos a uma mesada apoiada.</p>
-        </div>
+            <aside class="side-posts-column">
 
-        <div class="sidebar-item">
-            <img class="post-thumb" src="Assets/foto5.png" alt="imagem figma">
-            <p class="post-date-small">08-11-2021</p>
-            <p class="post-text-small">A vila removeu, gostou de explicar, nem viu presunto.</p>
-        </div>
+                <a href="#" class="post-card small">
+                    <div class="post-image-small">
+                        <img src="Assets/foto3.jpg" alt="Barcos coloridos na água">
+                    </div>
+                    <div class="post-info-small">
+                        <span class="post-date">08-11-2021</span>
+                        <p class="post-title-small">Parcialidade ou continuidade em princípios específicos</p>
+                    </div>
+                </a>
 
-        <div class="sidebar-item">
-            <img class="post-thumb" src="Assets/foto6.jpg" alt="imagem figa">
-            <p class="post-date-small">08-11-2021</p>
-            <p class="post-text-small">Protegendo conforme informado declarado ou Margaret</p>
-        </div>
+                <a href="#" class="post-card small">
+                    <div class="post-image-small">
+                        <img src="Assets/foto4.jpg" alt="Pessoa em um barco no meio de montanhas com neve">
+                    </div>
+                    <div class="post-info-small">
+                        <span class="post-date">08-11-2021</span>
+                        <p class="post-title-small">Acreditando, oh, dispondo-nos a uma mesada apoiada.</p>
+                    </div>
+                </a>
 
-    </aside>
-    
-</div>
+                <a href="#" class="post-card small">
+                    <div class="post-image-small">
+                        <img src="Assets/foto5.png" alt="Pessoa com braços abertos em um pôr do sol">
+                    </div>
+                    <div class="post-info-small">
+                        <span class="post-date">08-11-2021</span>
+                        <p class="post-title-small">A vila removeu, gostou de explicar, nem viu presunto.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="post-card small">
+                    <div class="post-image-small">
+                        <img src="Assets/foto6.jpg" alt="Pessoa sentada de costas em um campo">
+                    </div>
+                    <div class="post-info-small">
+                        <span class="post-date">08-11-2021</span>
+                        <p class="post-title-small">Protegendo conforme informado declarado ou Margaret</p>
+                    </div>
+                </a>
+
+            </aside>
+
+        </main>
+    </div>
 
 </body>
-
 </html>
