@@ -1,0 +1,6 @@
+# Atividade Realizada em Sala de Aula para Primeiro Contato com FlexBox 😃
+## Portugues 🇧🇷 
+<p>Durante o desenvolvimento da atividade sobre Flexbox, pude entender na prática como esse recurso facilita a organização dos elementos dentro de um container. A proposta era estruturar e alinhar diferentes blocos na página, utilizando propriedades como display: flex, justify-content, align-items e flex-wrap. Ao testar cada uma delas, ficou evidente como o Flexbox torna o layout mais responsivo e dinâmico, permitindo que os itens se adaptem ao espaço disponível. Essa atividade foi fundamental para reforçar meu conhecimento em CSS e compreender como criar interfaces mais modernas e flexíveis. 😁</p>
+
+## Ingles 🇺🇸
+<p>During the development of the Flexbox activity, I was able to understand in practice how this feature makes it easier to organize elements inside a container. The task involved structuring and aligning different blocks on the page using properties such as display: flex, justify-content, align-items, and flex-wrap. By testing each one, it became clear how Flexbox makes the layout more responsive and dynamic, allowing items to adapt to the available space. This activity was essential for strengthening my CSS knowledge and learning how to build more modern and flexible interfaces. 😁</p>
